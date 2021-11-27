@@ -1,0 +1,197 @@
+﻿[
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 180,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Joe Johnston",
+"born": 1950
+        }
+      },
+"type": "DIRECTED"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 186,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Samuel L. Jackson",
+"born": 1948
+        }
+      },
+"type": "ACTED_IN"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 184,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Chris Evans",
+"born": 1981
+        }
+      },
+"type": "ACTED_IN"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 183,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Joe Simonn",
+"born": 1913
+        }
+      },
+"type": "WROTE"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 181,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Christopher Markus",
+"born": 1970
+        }
+      },
+"type": "WROTE"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 182,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Stephen McFeely"
+        }
+      },
+"type": "WROTE"
+    }
+  },
+  {
+    "Node": {
+"identity": 179,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"title": "Captain America:The First Avenger",
+"released": 2011
+      }
+    },
+    "Neighbors": {
+"label": [
+        "Person"
+      ],
+"properties": {
+"identity": 185,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Hugo Weaving",
+"born": 1960
+        }
+      },
+"type": "ACTED_IN"
+    }
+  }
+]

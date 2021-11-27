@@ -1,0 +1,34 @@
+1) MATCH (a: Movie) return a
+2) MATCH (a:Person {name:'Hugo Weaving'})-[:ACTED_IN]->(m:Movie) RETURN m
+3) MATCH (a:Person {name:'Hugo Weaving'})-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(d:Person) RETURN d
+4) MATCH (a:Person {name:'Hugo Weaving'})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(c) RETURN c
+5) MATCH(b: Movie)<-[:ACTED_IN]-(a:Person)-[:ACTED_IN]->(m:Movie {title: 'The Matrix'}) RETURN b
+6) MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WITH p,count(m) as rels WHERE rels > 1 RETURN p, rels
+7) MATCH (m:Movie)<-[:WROTE|:DIRECTED]-(person:Person)
+RETURN person, m.title
+8) MATCH (p1:Person {name:'Hugo Weaving'})-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(p2:Person{name:'Keanu Reeves'}) RETURN m
+9) CREATE (movie:Movie {title:'Captain America:The First Avenger', released:2011})
+	CREATE (person1:Person {name:'Joe Johnston', born:1950})
+     WITH movie, person1
+    CREATE (person1) - [:DIRECTED] -> (movie)
+    CREATE (person2:Person {name:'Christopher Markus', born:1970})
+     WITH movie, person2
+    CREATE (person2)-[:WROTE]->(movie)
+    CREATE (person3:Person {name:'Stephen McFeely'})
+    WITH movie, person3
+CREATE (person3)-[:WROTE]->(movie)
+    CREATE (person4:Person {name:'Joe Simonn', born:1913})
+    WITH movie, person4
+CREATE (person4)-[:WROTE]->(movie)
+    CREATE (person5:Person {name:'Chris Evans', born:1981})
+    WITH movie, person5
+CREATE (person5)-[:ACTED_IN]->(movie)
+    CREATE (person6:Person {name:'Hugo Weaving', born:1960})
+    WITH movie, person6
+CREATE (person6)-[r:ACTED_IN]->(movie)
+    CREATE (person7:Person {name:'Samuel L. Jackson', born:1948})
+WITH movie, person7
+CREATE (person7)-[:ACTED_IN]->(movie)
+10) MATCH (movie:Movie {title:'Captain America:The First Avenger', released:2011})-[r]-(o)
+WITH movie as Node,{label:labels(o),type:type(r),properties: o} as Neighbors
+RETURN Node, Neighbors
